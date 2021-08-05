@@ -21,7 +21,7 @@
             </ul>
         </div>
         <div class="search">
-            <input type=txet value="请输入关键字">
+            <input id="search" type=txet value="请输入关键字">
             <button><img src="img/fa-search.png"></button>
         </div>
         <div class="user">
@@ -32,19 +32,44 @@
     <div class="banner">
         <div class="w">
             <div class="subnav">
-                <ul>
-                    <li><a href="#">前端开发<span>></span></a></li>
-                    <li><a href="#">后端开发<span>></span></a></li>
-                    <li><a href="#">人工智能<span>></span></a></li>
-                    <li><a href="#">移动开发<span>></span></a></li>
-                    <li><a href="#">商业预测<span>></span></a></li>
-                    <li><a href="#">云计算&大数据<span>></span></a></li>
-                    <li><a href="#">运维&测试<span>></span></a></li>
-                    <li><a href="#">UI设计<span>></span></a></li>
-                    <li><a href="#">产品设计<span>></span></a></li>
-                </ul>
+                <li><a href="#">前端开发<span>></span></a>
+                    <ul class="nextnav">
+                        <li><a href="#">二级菜单开发</a></li>
+                        <li><a href="#">二级开发</a></li>
+                        <li><a href="#">二级菜单开发</a></li>
+                        <li><a href="#">二级开发</a></li>
+                        <li><a href="#">二级菜单开发</a></li>
+                        <li><a href="#">二菜开发</a></li>
+                        <li><a href="#">二级单开发</a></li>
+                        <li><a href="#">二级菜单开发</a></li>
+                        <li><a href="#">菜单</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">后端开发<span>></span></a>
+                    <ul class="nextnav">
+                        <li><a href="#">二单开发</a></li>
+                        <li><a href="#">级开发</a></li>
+                        <li><a href="#">二菜单开发</a></li>
+                        <li><a href="#">二级开刷动啊发</a></li>
+                        <li><a href="#">二级单开发</a></li>
+                        <li><a href="#">菜发</a></li>
+                        <li><a href="#">二单开发</a></li>
+                        <li><a href="#">菜单开是大发</a></li>
+                        <li><a href="#">菜是单</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">人工智能<span>></span></a></li>
+                <li><a href="#">移动开发<span>></span></a></li>
+                <li><a href="#">商业预测<span>></span></a></li>
+                <li><a href="#">云计算&大数据<span>></span></a></li>
+                <li><a href="#">运维&测试<span>></span></a></li>
+                <li><a href="#">UI设计<span>></span></a></li>
+                <li><a href="#">产品设计<span>></span></a></li>
             </div>
             <div class="course">
+                <div class="closeCourse">
+                    <button>×</button>
+                </div>
                 <h2>我的课程表</h2>
                 <div class="bd">
                     <ul>
@@ -64,6 +89,7 @@
                     <button>全部课程</button>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="goods w">
@@ -178,4 +204,29 @@
             </dl>
         </div>
     </div>
+    <script>
+        var search = document.querySelector('.search input')
+        search.onfocus = function () {
+            search.value = ''
+        }
+        search.onblur = function () {
+            search.value = '请输入关键字'
+        }
+        /* var nav = document.querySelectorAll('.sub')
+        var next = document.querySelector('.nextnav')
+        console.log(nav);
+        for (i = 0; i < nav.length; i++) {
+          nav[i].onmouseover = function () {
+            next.style.display = 'block'
+          }
+          nav[i].onmouseout = function () {
+            next.style.display = 'none'
+          } 
+        }*/
+        var close = document.querySelector('.closeCourse')
+        var course = document.querySelector('.course')
+        close.onclick = function () {
+            course.style.display = 'none'
+        }
+    </script>
 </body>

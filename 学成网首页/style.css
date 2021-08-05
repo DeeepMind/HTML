@@ -111,12 +111,13 @@ li{
 }
 .subnav{
     float: left;
+    position: relative;
     width: 190px;
     height: 396px;
     padding: 12px 0;
     background-color: rgba(0,0,0,0.2);
 }
-.subnav ul li a{
+.subnav>li>a{
     display: inline-block;
     width: 150px;
     height: 44px;
@@ -125,19 +126,61 @@ li{
     color: #ffffff;
     font-size: 14px;
 }
-.subnav ul li a span{
+.subnav>li>a span{
     float: right;
 }
-.subnav ul li a:hover{
+.subnav>li>a:hover{
     color: #00a4ff;
     background-color: rgba(0,0,0,0.3);
 }
+.subnav .nextnav{
+  display: none;
+  position: absolute;
+  left: 190px;
+  top: 0;
+  width: 600px;
+  height: 420px;
+  background-color: rgba(0,0,0,0.2);
+}
+.subnav>li:hover .nextnav{
+    display: block;
+}
+.banner .subnav .nextnav li {
+  display: inline-block;
+  float: left;
+  padding-right: 30px;
+  padding-top: 20px;
+}
+.banner .subnav .nextnav li a{
+    font-size: 14px;
+    word-spacing: 10px;
+    font-weight:lighter;
+    color: rgba(255, 255, 255, 0.925);
+}
+.banner .subnav .nextnav li a:hover{
+    color: #00a4ff;
+}
 .course{
+  position: relative;
     float: right;
     height: 300px;
     width: 230px;
     margin-top: 50px;
     background-color: #fff;
+}
+.closeCourse button{
+  position:absolute;
+  left: -20px;
+  height: 20px;
+  width: 20px;
+  border: none;
+  font-size: 24px;
+  text-align: center;
+  line-height: 20px;
+  color: #9bceea;
+  background-color: #fff;
+  outline: none; 
+  border-radius: 0px;
 }
 .course>h2{
     height: 48px;
@@ -185,6 +228,7 @@ li{
     background-color: #00a4ff;
     color: #fff;
 }
+
 .goods {
     height: 60px;
     margin-top: 8px;
