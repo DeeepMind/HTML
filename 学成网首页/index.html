@@ -204,29 +204,5 @@
             </dl>
         </div>
     </div>
-    <script>
-        var search = document.querySelector('.search input')
-        search.onfocus = function () {
-            search.value = ''
-        }
-        search.onblur = function () {
-            search.value = '请输入关键字'
-        }
-        /* var nav = document.querySelectorAll('.sub')
-        var next = document.querySelector('.nextnav')
-        console.log(nav);
-        for (i = 0; i < nav.length; i++) {
-          nav[i].onmouseover = function () {
-            next.style.display = 'block'
-          }
-          nav[i].onmouseout = function () {
-            next.style.display = 'none'
-          } 
-        }*/
-        var close = document.querySelector('.closeCourse')
-        var course = document.querySelector('.course')
-        close.onclick = function () {
-            course.style.display = 'none'
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
