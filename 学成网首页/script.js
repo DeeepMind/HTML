@@ -1,3 +1,7 @@
+var userName = location.search.substr(1)
+var arr = userName.split('=')
+var user = document.querySelector('.user').querySelector('span')
+user.innerHTML = arr[1]
 var search = document.querySelector('.search input')
 search.onfocus = function () {
     search.value = ''
