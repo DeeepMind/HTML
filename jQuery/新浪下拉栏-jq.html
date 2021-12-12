@@ -41,11 +41,26 @@
     </style>
     <script>
         $(function () {
-            $('.nav>li').mouseover(function () {
-                $(this).children('ul').show()
-            })
-            $('.nav>li').mouseout(function () {
-                $(this).children('ul').hide()
+            //第一种写法
+            /*             $('.nav>li').mouseenter(function () {
+                            $(this).children('ul').slideDown(100)
+                        }) 
+                         $('.nav>li').mouseleave(function () {
+                            $(this).children('ul').slideUp(100)
+                        }) */
+            //第二种写法
+            /*             $('.nav>li').hover(function () {
+                            $(this).children('ul').slideDown(100)
+                        }, function () {
+                            $(this).children('ul').slideUp(100)
+                        }) */
+            //第三种写法,添加了stop动画,写在动画前面
+            $('.nav>li').hover(function () {
+                $(this).children('a').css({
+                    color: 'red'
+                })
+                $(this).css('backgroundColor', '#2222')
+                $(this).children('ul').stop().slideToggle(100)
             })
         })
     </script>
